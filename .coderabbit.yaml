@@ -1,0 +1,26 @@
+# CodeRabbit Configuration
+language: en-US
+tone_instructions: "Be concise and constructive. Focus on security, performance, and best practices."
+
+reviews:
+  auto_review: true
+  request_changes_workflow: true
+  high_level_summary: true
+  poem: false
+  review_status: true
+
+  path_filters:
+    - "!**/*.md"
+    - "!**/package-lock.json"
+    - "!**/yarn.lock"
+
+  path_instructions:
+    - path: "app/api/**/*.ts"
+      instructions: "Focus on API security, error handling, and performance."
+    - path: "components/**/*.tsx"
+      instructions: "Check for accessibility, performance, and React best practices."
+    - path: "lib/**/*.ts"
+      instructions: "Review for type safety, error handling, and code reusability."
+
+chat:
+  auto_reply: true

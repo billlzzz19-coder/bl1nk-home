@@ -1,0 +1,13 @@
+title = "gitleaks config"
+
+[allowlist]
+  description = "Folders and files to ignore during secret scanning"
+  paths = [
+    "node_modules",
+    ".next",
+    "coverage",
+    "public",
+    "docs/architecture.png",
+    ".gitleaks.toml",
+    "bl1nk_app.zip"
+  ]
