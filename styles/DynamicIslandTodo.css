@@ -1,0 +1,49 @@
+:root {
+  --di-background: #000000;
+  --di-text: #ffffff;
+  --di-accent: #0070f3;
+  --di-collapsed-width: 200px;
+  --di-collapsed-height: 40px;
+  --di-expanded-width: 300px;
+  --di-border-radius: 9999px;
+  --di-expanded-radius: 24px;
+}
+
+.dynamic-island-todo {
+  background-color: var(--di-background);
+  color: var(--di-text);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 640px) {
+  :root {
+    --di-collapsed-width: 200px;
+    --di-expanded-width: 90vw;
+  }
+  .dynamic-island-todo {
+    --di-collapsed-height: 36px;
+  }
+}
+
+.dynamic-island-todo button,
+.dynamic-island-todo input {
+  transition: all 0.15s ease-in-out;
+}
+
+.dynamic-island-todo ul {
+  scrollbar-width: thin;
+  scrollbar-color: #333 #000;
+}
+
+.dynamic-island-todo ul::-webkit-scrollbar {
+  width: 3px;
+}
+
+.dynamic-island-todo ul::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.dynamic-island-todo ul::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 3px;
+}
